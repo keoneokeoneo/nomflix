@@ -27,19 +27,15 @@ export default class extends React.Component {
         const {isMovie} = this.state;
         const parseId = parseInt(id);
 
-        if(isNaN(parseId)){
-            return push("/");
-        }
-
+        if(isNaN(parseId)) return push("/");
+        
         let result = null;
 
         try {
             if(isMovie){
-                const request = await movieAPI.movieById(parseId);
-                result = request.data;
+                ({data:result} = await movieAPI.movieById(parseId));
             } else {
-                const request = await tvAPI.showById(parseId);
-                result = request.data;
+                ({data:result} = await tvAPI.showById(parseId));
             }
         } catch {
             this.setState({error: "Can't find anything."});
