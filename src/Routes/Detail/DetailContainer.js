@@ -28,7 +28,7 @@ export default class extends React.Component {
         const parseId = parseInt(id);
 
         if(isNaN(parseId)) return push("/");
-        
+
         let result = null;
 
         try {
