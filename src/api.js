@@ -10,7 +10,7 @@ const api = axios.create({
 
 export const movieAPI = {
   nowPlaying: () => api.get("movie/now_playing"),
-  upcoming: () => api.get("movie/upcoming"),
+  upComing: () => api.get("movie/upcoming"),
   popular: () => api.get("movie/popular"),
   movieDetail: id =>
     api.get(`movie/${id}`, {
@@ -18,6 +18,9 @@ export const movieAPI = {
         append_to_response: "videos"
       }
     }),
+  movieVideos: id => api.get(`movie/${id}/videos`),
+  movieCast: id => api.get(`movie/${id}/credits`), // cast 추출
+  movieRecommend: id => api.get(`movie/${id}/recommendations`), 
   search: term =>
     api.get("search/movie", {
       params: {
