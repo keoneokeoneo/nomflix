@@ -105,7 +105,4 @@ const Movie = () => {
     );
 }
 
-Movie.propTypes = {
-}
-
 export default Movie;

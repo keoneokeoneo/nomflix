@@ -142,7 +142,6 @@ const useFetchData = (props) => {
 
 const Detail = props => {
     const {result, error, loading} = useFetchData(props);
-    console.log(result)
     return (
         loading ? (
             <>
@@ -228,7 +227,6 @@ const Detail = props => {
                                     key={company.id}
                                     name={company.name}
                                     logo_path={`${baseImageUrlW300}${company.logo_path}`}
-                                    origin_country={company.origin_country}
                                 />
                             ))}
                         </GridWrapper>

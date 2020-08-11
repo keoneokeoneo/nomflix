@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Container = styled.div`
 padding: 10px;
@@ -16,11 +17,17 @@ text-align: center;
 color: burlywood;
 `;
 
-const Season = ({name, count, number, path}) => (
+const Season = ({name, count, path}) => (
     <Container>
         <Poster src={path}/>
         <Description>{`${name} - ${count}편`}</Description>
     </Container>
 )
+
+Season.propTypes = {
+    name : PropTypes.string.isRequired,
+    count:PropTypes.number.isRequired,
+    path:PropTypes.string.isRequired
+}
 
 export default Season;

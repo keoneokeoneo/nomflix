@@ -112,7 +112,5 @@ const TV = () => {
     );
 }
 
-TV.propTypes = {
-}
 
 export default TV;

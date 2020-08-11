@@ -56,7 +56,7 @@ const useSearch = () => {
         }
     }
 
-    return {term, handleSubmit, updateTerm, loading, data}
+    return {term, handleSubmit, updateTerm, loading, data, error}
 }
 
 const Search = () => {
