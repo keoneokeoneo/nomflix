@@ -134,8 +134,6 @@ const useFetchData = (props) => {
 
     useEffect(() => {
         getData();
-
-        return () => setLoading(false);
     }, [])
 
     return {result, error, loading};

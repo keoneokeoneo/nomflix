@@ -39,7 +39,6 @@ const useFetchData = () => {
     }
     useEffect(() => {
         getData();
-        return () => setLoading(false);
     }, []);
 
     return { topRated, popular, airingToday, loading, error };

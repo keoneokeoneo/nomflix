@@ -31,7 +31,7 @@ const useSearch = () => {
     const handleSubmit = e => {
         e.preventDefault();
         if(term !== "") {
-            searchByTerm();
+            searchByTerm().then();
         }
     }
     const updateTerm = e => setTerm(e.target.value);

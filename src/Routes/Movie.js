@@ -33,7 +33,6 @@ const useFetchData = () => {
     }
     useEffect(() => {
         getData();
-        return () => setLoading(false);
     }, []);
 
     return { loading, nowPlaying, upComing, popular, error };
