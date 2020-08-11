@@ -46,6 +46,10 @@ export default withRouter(({ location: { pathname } }) => (
             <HeaderListItem current={pathname === "/search"}>
                 <HeaderListItemLink to="/search">Search</HeaderListItemLink>
             </HeaderListItem>
+
+            <HeaderListItem current={pathname === "/about"}>
+                <HeaderListItemLink to="/about">About</HeaderListItemLink>
+            </HeaderListItem>
         </HeaderList>
     </Header>
 ));
