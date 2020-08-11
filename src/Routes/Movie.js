@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { movieAPI } from '../api';
 import styled from 'styled-components'
 import Helmet from 'react-helmet'

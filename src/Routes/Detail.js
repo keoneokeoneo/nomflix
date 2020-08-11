@@ -6,6 +6,7 @@ import Loader from '../Components/Loader'
 import YouTube from "react-youtube";
 import CompanyCard from "../Components/CompanyCard";
 import Season from "../Components/Season";
+import Message from "../Components/Message";
 
 const baseImageUrlOriginal = "https://image.tmdb.org/t/p/original";
 const baseImageUrlW300 = "https://image.tmdb.org/t/p/w300";
@@ -158,6 +159,7 @@ const Detail = props => {
                         | Nomflix
                     </title>
                 </Helmet>
+                {error && <Message color="#e74c3c" text={error} />}
                 <Backdrop
                     bgImage={`${baseImageUrlOriginal}${result.backdrop_path}`}
                 />
@@ -179,7 +181,7 @@ const Detail = props => {
                             {result.imdb_id && (
                                 <IMDB href={`https://www.imdb.com/title/${result.imdb_id}`}
                                       target="_blank">
-                                    <img src={require("../assets/imdb_logo.png")} style={{height: "30px"}}/>
+                                    <img alt="IMDB" src={require("../assets/imdb_logo.png")} style={{height: "30px"}}/>
                                 </IMDB>
                             )}
                         </TitleWrapper>
