@@ -16,13 +16,7 @@ const Title = styled.span`
     font-size:24px;
     font-weight:600;
 `;
-const Explore = styled.div`
-     margin-left:40px;
-     background-color : white;
-     color:black;
-     border:1px solid black;
-     border-radius:4px;
-`;
+
 const Grid = styled.div`
     margin-top:25px;
     display:grid;
@@ -34,9 +28,6 @@ const Section = ({ title, children }) => (
     <Container>
         <TitleWrapper>
             <Title>{title}</Title>
-            <Explore>
-                <Link>View More</Link>
-            </Explore>
         </TitleWrapper>
         <Grid>{children}</Grid>
     </Container>
